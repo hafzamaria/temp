@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature App</title>
+</head>
+
+<body>
+    <h1>Temperature App</h1>
+    <form onsubmit="conditionCheck(); return false ;">
+        <label for="temp">Temperature</label>
+        <input type="number" id="temp" placeholder="Enter your temperature">
+        <br>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function conditionCheck() {
+
+            let temp = +document.querySelector("#temp").value;
+
+
+            if (temp > 30) {
+                document.querySelector("#result").innerHTML = "its too hot.";
+
+            } else if (temp > 25) {
+                document.querySelector("#result").innerHTML = "its pleasent outside.";
+
+            } else if (temp > 20) {
+                document.querySelector("#result")
+                .innerHTML = "the weather is cool cool!";
+
+            } else if (temp > 10) {
+                document.querySelector("#result")
+                .innerHTML = "its time to cover ur self with <b>jacket</b>!";
+
+            } else if (temp > 1) {
+                document.querySelector("#result")
+                .innerHTML = "time for double jacket!";
+            } else {
+                document.querySelector("#result").innerHTML = "Its freezing!";
+            }
+        }
+    </script>
+
+
+
+ 
+
+</body>
+
+</html>
